@@ -1,0 +1,10 @@
+e:\arquivos\documentos\visual studio 2015\Projects\POO\POO\bin\Debug\POO.exe.config
+e:\arquivos\documentos\visual studio 2015\Projects\POO\POO\obj\Debug\POO.csprojResolveAssemblyReference.cache
+e:\arquivos\documentos\visual studio 2015\Projects\POO\POO\obj\Debug\POO.Form1.resources
+e:\arquivos\documentos\visual studio 2015\Projects\POO\POO\obj\Debug\POO.Properties.Resources.resources
+e:\arquivos\documentos\visual studio 2015\Projects\POO\POO\obj\Debug\POO.csproj.GenerateResource.Cache
+e:\arquivos\documentos\visual studio 2015\Projects\POO\POO\bin\Debug\POO.exe
+e:\arquivos\documentos\visual studio 2015\Projects\POO\POO\bin\Debug\POO.pdb
+e:\arquivos\documentos\visual studio 2015\Projects\POO\POO\obj\Debug\POO.exe
+e:\arquivos\documentos\visual studio 2015\Projects\POO\POO\obj\Debug\POO.pdb
+e:\Arquivos\documentos\visual studio 2015\Projects\POO\POO\obj\Debug\POO.FormCadastroConta.resources
