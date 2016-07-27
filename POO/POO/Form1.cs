@@ -29,8 +29,8 @@ namespace POO
             c1.Deposita(100);
             AdicionaConta(c1);
 
-            Conta c2 = new Conta();
-            c2 = new Conta();
+            Conta c2 = new ContaCorrente();
+            c2 = new ContaCorrente();
             c2.Titular = new Cliente("Roberto", "1234-67");
             c2.Numero = 2;
             AdicionaConta(c2);

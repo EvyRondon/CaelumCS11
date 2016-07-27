@@ -24,7 +24,6 @@ namespace POO
 
         private void FormCadastroConta_Load(object sender, EventArgs e)
         {
-            comboTipoConta.
         }
     }
 }

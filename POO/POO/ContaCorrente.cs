@@ -4,12 +4,17 @@
     {
         public override bool Saca(double valor)
         {
-            return base.Saca(valor + 0.05);    
+            if (Saldo >= valor)
+            {
+                Saldo -= (valor + 0.05);
+                return true;
+            }
+            return false;
         }
 
         public override void Deposita(double valor)
         {
-            base.Deposita(valor - 0.10);   
+             Saldo += (valor - 0.10);
         }
     }
 }
