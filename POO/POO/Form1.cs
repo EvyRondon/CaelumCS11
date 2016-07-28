@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Banco.Contas;
 
-namespace POO
+namespace Banco
 {
     public partial class Form1 : Form
     {
-        private int numeroDeContas;
         public List<Conta> contas;
         public int indice;
 
@@ -44,25 +44,44 @@ namespace POO
             txtNumero.Text = Convert.ToString(contas[0].Numero);
             txtTitular.Text = contas[0].Titular.Nome;
             txtSaldo.Text = Convert.ToString(contas[0].Saldo);
+
+            //if(c1.Equals(c2))
+            //    MessageBox.Show("iguais");
+            //else
+            //    MessageBox.Show("diferentes");
         }
 
         private void btnDepositar_Click(object sender, EventArgs e)
         {
-            Conta selecionada = contas[indice];
-            selecionada.Deposita(Convert.ToDouble(txtValor.Text));
-            txtSaldo.Text = Convert.ToString(selecionada.Saldo);
+            try
+            {
+                Conta selecionada = (Conta) comboContas.SelectedItem;
+                if (!string.IsNullOrEmpty(txtValor.Text))
+                {
+                    selecionada.Deposita(Convert.ToDouble(txtValor.Text));
+                    txtSaldo.Text = Convert.ToString(selecionada.Saldo);
+                }
+                else
+                    MessageBox.Show("Digite um valor");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Argumento Inválido");
+            }
         }
 
         private void btnSacar_Click(object sender, EventArgs e)
         {
-            Conta selecionada = contas[indice];
-            bool saqueEfetuado = selecionada.Saca(Convert.ToDouble(txtValor.Text));
-            if (saqueEfetuado) {
+            try
+            {
+                Conta selecionada = (Conta) comboContas.SelectedItem;
                 txtSaldo.Text = Convert.ToString(selecionada.Saldo);
                 MessageBox.Show("Sucesso!");
-            }else
+            }
+            catch (SaldoInsuficienteException)
             {
                 MessageBox.Show("O valor do saque é maior que possui na conta.");
+                throw;
             }
         }
 
@@ -86,15 +105,29 @@ namespace POO
 
         public void AdicionaConta(Conta conta) {
             contas.Add(conta);
-            numeroDeContas++;
-            comboContas.Items.Add($"Titular {conta.Titular.Nome}");
-            comboTranfere.Items.Add($"Titular: {conta.Titular.Nome}");
+            comboContas.Items.Add(conta);
+            comboTranfere.Items.Add(conta);
+            //comboContas.DisplayMember = "Numero";
         }
 
         private void btnNovaConta_Click(object sender, EventArgs e)
         {
             FormCadastroConta formularioCadastro = new FormCadastroConta(this);
             formularioCadastro.ShowDialog();
+        }
+
+        private void btnImposto_Click(object sender, EventArgs e)
+        {
+            ContaCorrente conta = new ContaCorrente();
+            conta.Deposita(200.0);
+
+            SeguroDeVida sv = new SeguroDeVida();
+
+            TotalizadorDeTributos totalizador = new TotalizadorDeTributos();
+            totalizador.Adiciona(conta);
+            MessageBox.Show($"Total: {totalizador.Total}");
+            totalizador.Adiciona(sv);
+            MessageBox.Show($"Total: {totalizador.Total}");
         }
     }
 }

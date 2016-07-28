@@ -1,4 +1,4 @@
-﻿namespace POO
+﻿namespace Banco
 {
     public class Cliente
     {

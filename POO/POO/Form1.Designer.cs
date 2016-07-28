@@ -1,4 +1,4 @@
-﻿namespace POO
+﻿namespace Banco
 {
     partial class Form1
     {
@@ -46,6 +46,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboContas = new System.Windows.Forms.ComboBox();
             this.btnNovaConta = new System.Windows.Forms.Button();
+            this.btnImposto = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -226,11 +227,22 @@
             this.btnNovaConta.UseVisualStyleBackColor = true;
             this.btnNovaConta.Click += new System.EventHandler(this.btnNovaConta_Click);
             // 
+            // btnImposto
+            // 
+            this.btnImposto.Location = new System.Drawing.Point(90, 254);
+            this.btnImposto.Name = "btnImposto";
+            this.btnImposto.Size = new System.Drawing.Size(64, 23);
+            this.btnImposto.TabIndex = 16;
+            this.btnImposto.Text = "Imposto";
+            this.btnImposto.UseVisualStyleBackColor = true;
+            this.btnImposto.Click += new System.EventHandler(this.btnImposto_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(234, 287);
+            this.Controls.Add(this.btnImposto);
             this.Controls.Add(this.btnNovaConta);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -265,6 +277,7 @@
         private System.Windows.Forms.ComboBox comboTranfere;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnNovaConta;
+        private System.Windows.Forms.Button btnImposto;
     }
 }
 

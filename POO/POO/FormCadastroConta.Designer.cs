@@ -1,4 +1,4 @@
-﻿namespace POO
+﻿namespace Banco
 {
     partial class FormCadastroConta
     {
@@ -30,11 +30,11 @@
         {
             this.lblTitular = new System.Windows.Forms.Label();
             this.txtTitular = new System.Windows.Forms.TextBox();
-            this.txtNumero = new System.Windows.Forms.TextBox();
             this.lblNumero = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.lblConta = new System.Windows.Forms.Label();
             this.comboTipoConta = new System.Windows.Forms.ComboBox();
+            this.numero = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitular
@@ -54,14 +54,6 @@
             this.txtTitular.Size = new System.Drawing.Size(210, 20);
             this.txtTitular.TabIndex = 9;
             // 
-            // txtNumero
-            // 
-            this.txtNumero.Location = new System.Drawing.Point(62, 57);
-            this.txtNumero.MaxLength = 8;
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(210, 20);
-            this.txtNumero.TabIndex = 10;
-            // 
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
@@ -73,7 +65,7 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(197, 226);
+            this.btnCadastrar.Location = new System.Drawing.Point(197, 83);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
             this.btnCadastrar.TabIndex = 12;
@@ -98,17 +90,26 @@
             this.comboTipoConta.Size = new System.Drawing.Size(210, 21);
             this.comboTipoConta.TabIndex = 14;
             // 
+            // numero
+            // 
+            this.numero.AutoSize = true;
+            this.numero.Location = new System.Drawing.Point(62, 60);
+            this.numero.Name = "numero";
+            this.numero.Size = new System.Drawing.Size(13, 13);
+            this.numero.TabIndex = 15;
+            this.numero.Text = "1";
+            // 
             // FormCadastroConta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 118);
+            this.Controls.Add(this.numero);
             this.Controls.Add(this.comboTipoConta);
             this.Controls.Add(this.lblConta);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.lblTitular);
             this.Controls.Add(this.txtTitular);
-            this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.lblNumero);
             this.Name = "FormCadastroConta";
             this.Text = "Cadastro de Conta";
@@ -122,10 +123,10 @@
 
         private System.Windows.Forms.Label lblTitular;
         private System.Windows.Forms.TextBox txtTitular;
-        private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label lblConta;
         private System.Windows.Forms.ComboBox comboTipoConta;
+        private System.Windows.Forms.Label numero;
     }
 }
