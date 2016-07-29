@@ -9,6 +9,7 @@ namespace Banco
     {
         public List<Conta> contas;
         public int indice;
+        private Dictionary<string, Conta> dicionario;
 
         public Form1()
         {
@@ -18,6 +19,7 @@ namespace Banco
         private void Form1_Load(object sender, EventArgs e)
         {
             contas = new List<Conta>();
+            this.dicionario = new Dictionary<string, Conta>();
 
             Cliente gui = new Cliente("Guilherme Silveira", "12345678-9");
             ContaPoupanca c1 = new ContaPoupanca();
@@ -45,6 +47,7 @@ namespace Banco
             txtTitular.Text = contas[0].Titular.Nome;
             txtSaldo.Text = Convert.ToString(contas[0].Saldo);
 
+            
             //if(c1.Equals(c2))
             //    MessageBox.Show("iguais");
             //else
@@ -107,6 +110,7 @@ namespace Banco
             contas.Add(conta);
             comboContas.Items.Add(conta);
             comboTranfere.Items.Add(conta);
+            dicionario.Add(conta.Titular.Nome, conta);
             //comboContas.DisplayMember = "Numero";
         }
 
@@ -128,6 +132,25 @@ namespace Banco
             MessageBox.Show($"Total: {totalizador.Total}");
             totalizador.Adiciona(sv);
             MessageBox.Show($"Total: {totalizador.Total}");
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string nomeTitular = txtBuscaTitular.Text;
+                Conta conta = dicionario[nomeTitular];
+
+                txtTitular.Text = conta.Titular.Nome;
+                txtNumero.Text = Convert.ToString(conta.Numero);
+                txtSaldo.Text = conta.Saldo.ToString();
+                comboContas.SelectedItem = conta;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Não encontrado!");
+            }
+
         }
     }
 }

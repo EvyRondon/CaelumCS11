@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Banco.Busca
 {
     class GeradorDeDevedores
     {
-        public List<string> GeraList()
+        public SortedSet<string> GeraLista()
         {
-            List<string> nomes = new List<string>();
+            SortedSet<string> nomes = new SortedSet<string>();
             for (int i = 0; i < 30000; i++)
             {
                 nomes.Add($"devedores {i}");

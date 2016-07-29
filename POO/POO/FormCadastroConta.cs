@@ -18,7 +18,7 @@ namespace Banco
             InitializeComponent();
 
             GeradorDeDevedores gerador = new GeradorDeDevedores();
-            this.devedores = gerador.GeraList();
+            this.devedores = gerador.GeraLista();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
