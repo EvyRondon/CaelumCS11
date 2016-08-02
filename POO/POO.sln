@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banco", "POO\Banco.csproj", "{7C97BECE-7767-4AF0-BCE3-10C92607B72F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorDeTexto", "EditorDeTexto\EditorDeTexto.csproj", "{CA1CB7E3-A826-47D6-942D-6FEE5E20E933}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terminal", "Terminal\Terminal.csproj", "{252F2D4E-8A15-4E36-8480-19BDF2260DC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{7C97BECE-7767-4AF0-BCE3-10C92607B72F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C97BECE-7767-4AF0-BCE3-10C92607B72F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C97BECE-7767-4AF0-BCE3-10C92607B72F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA1CB7E3-A826-47D6-942D-6FEE5E20E933}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA1CB7E3-A826-47D6-942D-6FEE5E20E933}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA1CB7E3-A826-47D6-942D-6FEE5E20E933}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA1CB7E3-A826-47D6-942D-6FEE5E20E933}.Release|Any CPU.Build.0 = Release|Any CPU
+		{252F2D4E-8A15-4E36-8480-19BDF2260DC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{252F2D4E-8A15-4E36-8480-19BDF2260DC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{252F2D4E-8A15-4E36-8480-19BDF2260DC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{252F2D4E-8A15-4E36-8480-19BDF2260DC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
