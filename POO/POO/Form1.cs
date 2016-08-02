@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using Banco.Contas;
+using System.Linq;
 
 namespace Banco
 {
@@ -35,19 +36,29 @@ namespace Banco
             c2 = new ContaCorrente();
             c2.Titular = new Cliente("Roberto", "1234-67");
             c2.Numero = 2;
+            c2.Deposita(300);
             AdicionaConta(c2);
 
             ContaCorrente c3 = new ContaCorrente();
             c3 = new ContaCorrente();
             c3.Titular = new Cliente("Emily S.", "28390-67");
             c3.Numero = 3;
+            c3.Deposita(500);
             AdicionaConta(c3);
 
             txtNumero.Text = Convert.ToString(contas[0].Numero);
             txtTitular.Text = contas[0].Titular.Nome;
             txtSaldo.Text = Convert.ToString(contas[0].Saldo);
 
-            
+            //var filtro = contas.Where((Conta c) => { return c.Saldo > 2000; });
+
+            //foreach (Conta conta in filtro)
+            //{
+            //    MessageBox.Show(conta.Titular.Nome);
+            //}
+
+            //var total = contas.Count(c => c.Numero < 100);
+            //MessageBox.Show(total.ToString());
             //if(c1.Equals(c2))
             //    MessageBox.Show("iguais");
             //else
@@ -151,6 +162,12 @@ namespace Banco
                 MessageBox.Show("Não encontrado!");
             }
 
+        }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            FormRelatorios form = new FormRelatorios(this.contas);
+            form.ShowDialog();
         }
     }
 }

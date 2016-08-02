@@ -21,5 +21,11 @@
             }
             return false;
         }
+
+        public override bool Equals(object obj)
+        {
+            Cliente outroCliente = (Cliente)obj;
+            return this.Nome == outroCliente.Nome && this.Rg == outroCliente.Rg;
+        }
     }
 }
