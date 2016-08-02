@@ -28,6 +28,7 @@ namespace Banco
                 listaResultado.Items.Clear();
                 var resultado = from c in contas
                                 where c.Saldo > 5000
+                                orderby c.Titular.Nome
                                 select c;
                 foreach (var c in resultado)
                 {
@@ -59,6 +60,7 @@ namespace Banco
                 var resultado = from c in contas
                                 where c.Numero < 10 &&
                                 c.Saldo > 1000
+                                orderby c.Titular.Nome 
                                 select c;
                 foreach (var c in resultado)
                 {
