@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banco", "POO\Banco.csproj", "{7C97BECE-7767-4AF0-BCE3-10C92607B72F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorDeTexto", "EditorDeTexto\EditorDeTexto.csproj", "{602D631C-36AB-4D81-9484-DE0B4831DCDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7C97BECE-7767-4AF0-BCE3-10C92607B72F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C97BECE-7767-4AF0-BCE3-10C92607B72F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C97BECE-7767-4AF0-BCE3-10C92607B72F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{602D631C-36AB-4D81-9484-DE0B4831DCDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{602D631C-36AB-4D81-9484-DE0B4831DCDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{602D631C-36AB-4D81-9484-DE0B4831DCDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{602D631C-36AB-4D81-9484-DE0B4831DCDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
